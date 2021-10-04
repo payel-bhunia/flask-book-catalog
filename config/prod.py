@@ -1,4 +1,6 @@
+import os
+
 DEBUG = False
 SECRET_KEY = 'kiran'
-SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:kiran@localhost:5433/catalog_db'
-SQLALCHEMY_TRACK_MODIFICATIONS = True
+SQLALCHEMY_DATABASE_URI = os.environ('DATABASE_URL')
+SQLALCHEMY_TRACK_MODIFICATIONS = False
